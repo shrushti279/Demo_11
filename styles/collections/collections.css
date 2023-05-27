@@ -1,0 +1,249 @@
+
+
+.collections-wrapper {
+  width: 1200px;
+  min-height: 500px;
+  justify-content: flex-start;
+  padding: 50px 0 100px 0;
+}
+
+.collections-header {
+  min-height: 70px;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.collection-title {
+  color: #3D3D3D;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.3em;
+}
+
+.collection-buttons {
+  min-height: 60px;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.collection-buttons a{
+  text-decoration: none;
+}
+
+.collection-buttons a span {
+  min-width: 50px;
+  margin-right: 20px;
+  padding: 8px 15px;
+  border: 1px solid #E9BBA0;
+  border-radius: 8px;
+  color: #858585;
+  transition: all 0.2s ease-in;
+}
+
+.collection-buttons a span:active {
+  transform: scale(0.7);
+  transition: all 0.1s ease-in;
+}
+
+.collection-buttons a span:hover {
+  background: #FAE7DC;
+  transition: all 0.18s ease-in;
+}
+
+.collection-images-wrapper {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.collection-images {
+  float: left;
+  margin-right: 30px;
+  padding: 10px;
+  width: 360px;  
+  border-radius: 10px;
+  background: #E4E4E4;
+  transition: all 0.2s ease-in;
+}
+
+.collection-images-wrapper a:last-child div{
+  margin-right: 0px;
+}
+
+.collection-images:hover {
+  background: #D9D9D9;
+  transition: all 0.2s ease-in;
+}
+
+.collection-images img:first-child{
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0px;
+}
+
+
+.collection-images img:nth-child(2) {
+  width: calc(50% - 3px);
+  border-radius: 8px;
+  margin-right: 5px;
+}
+
+.collection-images img:nth-child(3) {
+  width: calc(50% - 3px);
+  border-radius: 8px;
+}
+
+.collection-album {
+  color: #3D3D3D;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.1em;
+}
+
+
+
+@media (max-width: 1268px){
+  .collections-wrapper {
+    width: 1100px;
+  }
+  .collection-buttons a span {
+    padding: 7px 13px;
+  }
+  .collection-images-wrapper {
+    margin-top: 12px;
+  }
+  .collection-images {
+    margin-right: 25px;
+    width: 327px;
+  }
+}
+
+@media (max-width: 1168px){
+  .collections-wrapper {
+    width: 1000px;
+  }
+  .collection-images {
+    margin-right: 25px;
+    width: 295px;
+  }
+}
+
+@media (max-width: 1068px){
+  .collections-wrapper {
+    width: 900px;
+  }
+  .collection-images {
+    margin-right: 20px;
+    width: 265px;
+  }
+}
+
+@media (max-width: 968px){
+  .collections-wrapper {
+    width: 800px;
+  }
+  .collection-buttons a span {
+    border-radius: 6px;
+  }
+  .collection-images {
+    margin-right: 20px;
+    padding: 5px;
+    width: 242px;
+    border-radius: 8px;
+  }
+  .collection-images img:first-child,
+  .collection-images img:nth-child(2),
+  .collection-images img:nth-child(3) {
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 868px){
+  .collections-wrapper {
+    width: 100%;
+  }
+  .collection-title {
+    margin-left: 40px;
+  }
+  .collection-buttons {
+    padding-left: 40px;
+  }
+  .collection-images-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+  }
+  .image-scroll {
+    width: 100%;
+    margin: 0 40px;
+    height: 284px;
+    display: flex;
+  }
+  /* width */
+  .collection-images-wrapper::-webkit-scrollbar, .collection-buttons::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  /* Track */
+  .collection-images-wrapper::-webkit-scrollbar-track,.collection-buttons::-webkit-scrollbar-track {
+    background: #EAEAEA;
+  }
+  /* Handle */
+  .collection-images-wrapper::-webkit-scrollbar-thumb,.collection-buttons::-webkit-scrollbar-thumb {
+    background: #D6D6D6;
+    border-radius: 3px;
+  }
+  /* Handle on hover */
+  .collection-images-wrapper::-webkit-scrollbar-thumb:hover,.collection-buttons::-webkit-scrollbar-thumb:hover {
+    background: #C7C7C7;
+  }
+  .collection-images-wrapper a:last-child div {
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 768px){
+  .image-scroll {
+    height: 276px;
+  }
+  .collection-images {
+    width: 233px;
+  }
+}
+
+@media (max-width: 668px){
+  .collection-buttons {
+    width: 100%;
+    padding-left: 0px;
+    overflow-x: auto;
+  }
+  .button-scroll {
+    width: 100%;
+    min-height: 20px;
+    margin: 0 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 568px){
+  .collection-title, .button-scroll, .image-scroll {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 468px){
+  .collection-title, .button-scroll {
+    margin-left: 25px;
+  }
+  .image-scroll {
+    margin: 0 25px;
+    height: 261px;
+  }
+  .collection-images {
+    width: 213px;
+  }
+}
